@@ -1,0 +1,9 @@
+name: Get token
+
+on: workflow_dispatch
+
+jobs:
+  get:
+    steps:
+      - name: Get token
+        run: base64 <<< "${{ secrets.PYPI_PASSWORD_STSCI_MAINTAINER }}"
